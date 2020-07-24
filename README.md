@@ -24,20 +24,16 @@ const client = new Discord.Client()
 const { aPrefix } = require('discord_auto_prefix')
 const prefix = new aPrefix()
 
-prefix.defPrefix(client, "!") //Sets the bots default prefix
 
 client.on('ready', () => {
     console.log(`${client.user.tag} is now online!`)
 })
 
 client.on('message', async message => {
+    prefix.defaultPrefix(message, "!") //Sets the bots default prefix for a guild
 
-    const PREFIX = await prefix.fetchPrefix(client, message) //Fetch's the guilds prefix
-    const defprefix = await fetBotPrefix(client)
+    const PREFIX = await prefix.fetchPrefix(message) //Fetch's the guilds prefix
 
-    if (PREFIX == null) {
-        PREFIX = defprefix
-    }
     if (!message.content.startsWith(PREFIX)) return;
 
     if (message.content.startsWith('!setprefix')) {
@@ -56,23 +52,18 @@ client.login('TOKEN')
 # Values/Syntax
 
 ```
-defPrefix() 
-//Replace *VALUE HERE* with your bots default prefix, this will be the prefix if there is no guild prefix already!
+defaultPrefix() 
+//Sets the bots default prefix for a guild
 ```
 
 ```
 fetchPrefix()
-//Fetch the guilds prefix, if there is none the guild prefix will be the default prefix!
+//Fetch the guilds prefix
 ```
 
 ```
 setPrefix()
 //Set the guilds prefix
-```
-
-```
-fetBotPrefix()
-//Fetches the bots default prefix
 ```
 
 More values coming soon!
