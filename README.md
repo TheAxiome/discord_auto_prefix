@@ -20,18 +20,24 @@
 ```
 const Discord = require('discord.js')
 const client = new Discord.Client()
+
 const { aPrefix } = require('discord_auto_prefix')
 const prefix = new aPrefix()
-const DEFAULT_PREFIX = `!`; //It is important to have a defualt prefix variable
+
+prefix.defPrefix(client, "!") //Sets the bots default prefix
 
 client.on('ready', () => {
     console.log(`${client.user.tag} is now online!`)
 })
 
 client.on('message', async message => {
-    prefix.defPrefix(client, DEFAULT_PREFIX) //Sets the bots default prefix
 
-    const PREFIX = aPrefix.fetchPrefix(client, message) //Fetch's the guilds prefix
+    const PREFIX = await prefix.fetchPrefix(client, message) //Fetch's the guilds prefix
+    const defprefix = await fetBotPrefix(client)
+
+    if (PREFIX == null) {
+        PREFIX = defprefix
+    }
     if (!message.content.startsWith(PREFIX)) return;
 
     if (message.content.startsWith('!setprefix')) {
@@ -43,12 +49,14 @@ client.on('message', async message => {
 })
 
 client.login('TOKEN')
+
+//A better and easier to understand guide will be put here soon!
 ```
 
 # Values/Syntax
 
 ```
-defPrefix(`VALUE HERE`) 
+defPrefix() 
 //Replace *VALUE HERE* with your bots default prefix, this will be the prefix if there is no guild prefix already!
 ```
 
@@ -58,8 +66,13 @@ fetchPrefix()
 ```
 
 ```
-setPrefix(`VALUE HERE`)
+setPrefix()
 //Set the guilds prefix
+```
+
+```
+fetBotPrefix()
+//Fetches the bots default prefix
 ```
 
 More values coming soon!
