@@ -4,8 +4,8 @@
 
 # Useful Links
 
-[Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
-[Discord](https://discord.gg/ZbKVPY5) Contact me axiome#0441
+- [Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
+- [Discord](https://discord.gg/ZbKVPY5) Contact me axiome#0441
 
 # How to use
 
