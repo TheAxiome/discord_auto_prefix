@@ -12,9 +12,9 @@
 `npm i discord_auto_prefix`
 
 ```
-const Discord = require('discord.js)
+const Discord = require('discord.js')
 const client = new Discord.Client()
-const { aPrefix } = require('discord_auto_prefix)
+const { aPrefix } = require('discord_auto_prefix')
 const prefix = new aPrefix()
 const DEFAULT_PREFIX = `!`; //It is important to have a defualt prefix variable
 
