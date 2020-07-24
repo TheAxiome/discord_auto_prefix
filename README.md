@@ -1,6 +1,6 @@
 # Package Info
 
-(Create discord.js custom guild prefix without much work!)[https://www.npmjs.com/package/discord_auto_prefix]
+[Create discord.js custom guild prefix without much work!](https://www.npmjs.com/package/discord_auto_prefix)
 
 # How to use
 
@@ -32,6 +32,23 @@ client.on('message', async message => {
 })
 
 client.login('TOKEN')
+```
+
+# Values/Syntax
+
+```
+defPrefix(`VALUE HERE`) 
+//Replace *VALUE HERE* with your bots default prefix, this will be the prefix if there is no guild prefix already!
+```
+
+```
+fetchPrefix()
+//Fetch the guilds prefix, if there is none the guild prefix will be the default prefix!
+```
+
+```
+setPrefix(`VALUE HERE`)
+//Set the guilds prefix
 ```
 
 More values coming soon!
