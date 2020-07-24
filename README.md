@@ -7,6 +7,12 @@
 - [Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
 - [Discord](https://discord.gg/ZbKVPY5) Contact me axiome#0441
 
+# Update Log
+
+**Version 1.3.0**
+- Bug fixes
+- Added new instances to call the client, and guild
+
 # How to use
 
 `npm i discord_auto_prefix`
@@ -23,15 +29,15 @@ client.on('ready', () => {
 })
 
 client.on('message', async message => {
-    prefix.defPrefix(DEFAULT_PREFIX) //Sets the bots default prefix
+    prefix.defPrefix(client, DEFAULT_PREFIX) //Sets the bots default prefix
 
-    const PREFIX = aPrefix.fetchPrefix() //Fetch's the guilds prefix
+    const PREFIX = aPrefix.fetchPrefix(client, message) //Fetch's the guilds prefix
     if (!message.content.startsWith(PREFIX)) return;
 
     if (message.content.startsWith('!setprefix')) {
         const NEW_PREFIX = message.content.slice(10)
 
-        prefix.setPrefix(NEW_PREFIX) //Sets the guilds prefix
+        prefix.setPrefix(message, NEW_PREFIX) //Sets the guilds prefix
     }
 
 })
