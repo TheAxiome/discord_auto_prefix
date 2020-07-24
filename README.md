@@ -2,6 +2,11 @@
 
 [Create discord.js custom guild prefix without much work!](https://www.npmjs.com/package/discord_auto_prefix)
 
+# Useful Links
+
+[Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
+[Discord](https://discord.gg/ZbKVPY5) Contact me axiome#0441
+
 # How to use
 
 `npm i discord_auto_prefix`
