@@ -48,7 +48,7 @@ client.on('message', async message => {
 
 })
 
-client.login('NzMxNDEzNzcxMDI4NzkxMzE2.XwlsKA.HBpEKH0aptonKfcR9Yhhg9fLg10')
+client.login('TOKEN')
 
 //A better and easier to understand guide will be put here soon!
 ```
