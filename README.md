@@ -24,27 +24,31 @@ const client = new Discord.Client()
 const { aPrefix } = require('discord_auto_prefix')
 const prefix = new aPrefix()
 
-
 client.on('ready', () => {
     console.log(`${client.user.tag} is now online!`)
 })
 
-client.on('message', async message => {
-    prefix.defaultPrefix(message, "!") //Sets the bots default prefix for a guild
+client.on('guildCreate', async guild => {
+    prefix.defaultPrefix(guild, "!") //Sets the bots default prefix when it joins a new guild
+})
 
+client.on('message', async message => {
     const PREFIX = await prefix.fetchPrefix(message) //Fetch's the guilds prefix
 
-    if (!message.content.startsWith(PREFIX)) return;
 
-    if (message.content.startsWith('!setprefix')) {
-        const NEW_PREFIX = message.content.slice(10)
+    if (message.content === `${PREFIX}ping`) {
+        message.channel.send(`PONG! My prefix  is ${PREFIX}`)
+    }
 
-        prefix.setPrefix(message, NEW_PREFIX) //Sets the guilds prefix
+    if (message.content.startsWith(`${PREFIX}setprefix`)) {
+        const args = message.content.slice(10)
+
+        prefix.setPrefix(message, args) //Sets the guilds prefix
     }
 
 })
 
-client.login('TOKEN')
+client.login('NzMxNDEzNzcxMDI4NzkxMzE2.XwlsKA.HBpEKH0aptonKfcR9Yhhg9fLg10')
 
 //A better and easier to understand guide will be put here soon!
 ```
@@ -63,7 +67,7 @@ fetchPrefix()
 
 ```
 setPrefix()
-//Set the guilds prefix
+//Change a guilds prefix
 ```
 
 More values coming soon!
