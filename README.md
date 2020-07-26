@@ -66,13 +66,11 @@ client.on('message', async message => {
 })
 
 client.login('TOKEN')
-
-//A better and easier to understand guide will be put here soon!
 ```
 
 # Values/Syntax
 
-**If you do not understand the syntax below, or have any values to replace it with, copy from the example I showed above*
+**If you do not understand the syntax below, or have any values to replace it with, copy from the example I showed above**
 
 ```
 defaultPrefix(guild, value)
