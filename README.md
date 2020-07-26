@@ -5,7 +5,7 @@
 # Useful Links
 
 - [Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
-- [Discord](https://discord.gg/ZbKVPY5) Contact me axiome#0441
+- Report any issues in my [discord](https://discord.gg/ZbKVPY5), go to the npm-issues channel! 
 
 # Update Log
 
