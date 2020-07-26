@@ -23,7 +23,7 @@
 
 `npm i discord_auto_prefix`
 
-```
+```javaScript
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -73,13 +73,16 @@ client.login('TOKEN')
 # Values/Syntax
 
 ```
-defaultPrefix() 
-//Sets the bots default prefix for a guild
+**defaultPrefix(guild, value)**
+This sets the default prefix of a bot when it joins a new guild
+
+Replace *value* with the prefix you want to set
+Replace guild with the guild value
 ```
 
 ```
 deletePrefix()
-//Delete a guilds prefix when the bot leaves, required because it fixes some bugs
+/
 
 ```
 fetchPrefix()
