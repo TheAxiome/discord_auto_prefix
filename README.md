@@ -11,6 +11,7 @@
 # Update Log
 
 **Version 1.4.0**
+- Fixed when using *setPrefix()* command, nothing else works
 - Fixed commands not working after the prefix was changed
 - Updated every command
 - Added *deletePrefix()* command, see the values/syntax section for how it works
