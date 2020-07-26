@@ -73,17 +73,19 @@ client.login('TOKEN')
 # Values/Syntax
 
 ```
-**defaultPrefix(guild, value)**
+defaultPrefix(guild, value)
+```
+```css
 This sets the default prefix of a bot when it joins a new guild
 
 Replace *value* with the prefix you want to set
-Replace guild with the guild value
+Replace *guild* with the guild value
 ```
 
 ```
-deletePrefix()
-/
+deletePrefix(guild)
 
+This deletes a guilds prefix data when the bot leaves it
 ```
 fetchPrefix()
 //Fetch the guilds prefix
