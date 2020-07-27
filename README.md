@@ -2,7 +2,7 @@
 
 [Create discord.js custom guild prefix without much work!](https://www.npmjs.com/package/discord_auto_prefix)
 
-[This is a list of npms I created, and will make next](https://github.com/TheAxiome/NPM-List/blob/masterREADME.md)
+[This is a list of npms I created, and will make next](https://github.com/TheAxiome/NPM-List)
 
 # Useful Links
 
