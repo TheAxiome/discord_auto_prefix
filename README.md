@@ -9,8 +9,9 @@
 - Git hub [Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
 - Report any issues or feedback in my [discord](https://discord.gg/ZbKVPY5), go to the npm-issues channel! 
 # Update Log
-**Version 1.4.5**
+**Version 1.4.4**
 - Added *getGuildPrefix* command, see values/syntax for how it works
+- Fixed embed color error
 
 **Version 1.4.0**
 - Fixed when using *setPrefix()* command, nothing else works
@@ -56,7 +57,7 @@ client.on('message', async message => {
     const command = args.shift().toLowerCase();
 
     if (command === "ping") {
-        message.channel.send(`PONG!`)
+        message.channel.send(`PONG! my prefix is ${PREFIX}`) 
     }
 
     if (command === "setprefix") {
