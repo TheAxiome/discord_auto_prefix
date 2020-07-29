@@ -9,6 +9,8 @@
 - Git hub [Issues](https://github.com/TheAxiome/discord_auto_prefix/issues)
 - Report any issues or feedback in my [discord](https://discord.gg/ZbKVPY5), go to the npm-issues channel! 
 # Update Log
+**Version 1.4.5**
+- Added *getGuildPrefix* command, see values/syntax for how it works
 
 **Version 1.4.0**
 - Fixed when using *setPrefix()* command, nothing else works
@@ -63,6 +65,10 @@ client.on('message', async message => {
 
         prefix.setPrefix(message, args)
     }
+    
+    if (command == "prefix") {
+      prefix.getGuildPrefix(message, client, args)//Fetch the prefix for a guild through name/id or the current guild
+    }
 
 })
 
@@ -110,6 +116,18 @@ This changes a guilds prefix
 
 Replace "message" with the message value
 Replace "value" with the new prefix
+```
+
+```
+getGuildPrefix(message, client, args)
+```
+![Example Image](https://media.discordapp.net/attachments/737327455735513139/738020653399277608/Screenshot_2020-07-29_at_9.10.11_AM.png)
+```css
+Like the example shown above, fetch the prefix for any guild with the id, or the current guild
+
+Replace "message" with your message value
+Replace "client" with your client value
+And "args" should be the guild id you want the prefix for, or leave it blank for the current guild
 ```
 
 ```
